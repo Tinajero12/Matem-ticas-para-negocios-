@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tienda EcoPádel</title>
+  <link rel="stylesheet" href="style3.css">
+  <style>
+    #mensaje {
+      color: red;
+      font-weight: bold;
+      margin-top: 10px;
+      display: none;
+    }
+
+    .producto-imagen {
+      width: 300px;
+      cursor: pointer;
+    }
+
+    /* Efecto de vibración */
+    @keyframes shake {
+      0% { transform: translateX(0); }
+      25% { transform: translateX(-5px); }
+      50% { transform: translateX(5px); }
+      75% { transform: translateX(-5px); }
+      100% { transform: translateX(0); }
+    }
+
+    .vibrar {
+      animation: shake 0.4s;
+    }
+  </style>
+</head>
+<body>
+
+  <header id="encabezado">
+    <h1 class="titulo">EcoPádel</h1>
+    <p class="subtitulo">Palas ecológicas para un juego más consciente</p>
+  </header>
+
+  <main id="contenido">
+    <section class="producto">
+      <div class="imagenes-producto">
+        <img id="imagen-pala" src="pala_fosfo.png" alt="Pala de pádel ecológica" class="producto-imagen" onclick="cambiarImagen()">
+      </div>
+
+      <h2 class="producto-nombre">Pala EcoPower</h2>
+      <p class="producto-descripcion">Hecha con materiales reciclados y alta durabilidad.</p>
+      <p class="producto-precio">$2,499.99</p>
+
+      <button id="btn-comprar" class="btn-comprar" onclick="mostrarMensaje()">Comprar pala</button>
+      <p id="mensaje">Producto no disponible</p>
+    </section>
+  </main>
+
+  <footer id="pie">
+    <p class="footer-texto">© 2025 EcoPádel. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    const imagenes = [
+      "pala_fosfo.png",
+      "img2_ecoádel.jpeg",
+      "img3_ecopádel.jpeg"
+    ];
+
+    let indice = 0;
+
+    function cambiarImagen() {
+      const imagen = document.getElementById("imagen-pala");
+      indice = (indice + 1) % imagenes.length;
+      imagen.src = imagenes[indice];
+    }
+
+    function mostrarMensaje() {
+      const mensaje = document.getElementById("mensaje");
+      const boton = document.getElementById("btn-comprar");
+
+      // Mostrar mensaje
+      mensaje.style.display = "block";
+
+      // Agregar clase de vibración
+      boton.classList.add("vibrar");
+
+      // Quitar clase de vibración después de que termine
+      setTimeout(() => {
+        boton.classList.remove("vibrar");
+        mensaje.style.display = "none";
+      }, 3000); // 3 segundos
+    }
+  </script>
+  <window.onload = function() {
+  alert("¿Deseas cambiar el idioma a Inglés?");
+}
+</window.onload>
+
+
+</body>
+</html>

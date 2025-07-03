@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabores del Alma.com</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Estilos CSS personalizados para la navegación vertical */
+        @media (min-width: 1024px) { /* Se aplica en pantallas grandes (lg) y superiores */
+            .vertical-nav {
+                width: 64px; /* Ancho colapsado: equivalente a Tailwind's w-16 */
+                transition: width 0.3s ease-in-out; /* Transición suave para el ancho */
+                overflow: hidden; /* Oculta cualquier contenido que se desborde */
+            }
+            .vertical-nav:hover {
+                width: 180px; /* Ancho expandido: ajusta según sea necesario */
+            }
+            /* Oculta y muestra el texto de los enlaces con opacidad */
+            .vertical-nav .nav-text {
+                opacity: 0;
+                transition: opacity 0.3s ease-in-out;
+                white-space: nowrap; /* Evita que el texto se envuelva */
+            }
+            .vertical-nav:hover .nav-text {
+                opacity: 1;
+            }
+            /* Asegura que los íconos siempre estén visibles y bien espaciados */
+            .vertical-nav .nav-icon {
+                flex-shrink: 0; /* Evita que el icono se encoja */
+                margin-right: 0.5rem; /* Espacio a la derecha del icono */
+            }
+            /* Ajusta el padding horizontal de los elementos cuando la barra está colapsada */
+            .vertical-nav .nav-item {
+                justify-content: center; /* Centra el contenido (iconos) cuando está colapsado */
+            }
+            .vertical-nav:hover .nav-item {
+                justify-content: flex-start; /* Alinea el contenido a la izquierda cuando está expandido */
+            }
+        }
+    </style>
+</head>
+<body class="font-sans antialiased bg-gray-100 flex">
+
+    <aside class="hidden lg:flex flex-col fixed right-0 top-0 h-full bg-white shadow-lg p-6 vertical-nav z-30">
+        <div class="mt-20 flex flex-col space-y-6 w-full"> 
+            <a href="#presentacion" class="text-gray-600 hover:text-gray-900 text-lg font-medium py-2 flex items-center nav-item">
+                <img src="https://via.placeholder.com/20x20/cccccc/ffffff?text=P" alt="Presentación Icon" class="nav-icon">
+                <span class="nav-text">Presentación</span>
+            </a>
+            <a href="#menu" class="text-gray-600 hover:text-gray-900 text-lg font-medium py-2 flex items-center nav-item">
+                <img src="menu_icon.png" alt="Menú Icon" class="nav-icon">
+                <span class="nav-text">Menú</span>
+            </a>
+            <a href="#pedidos" class="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold py-2 px-4 rounded text-lg text-center transition duration-300 flex items-center justify-center nav-item">
+                <img src="https://via.placeholder.com/20x20/cccccc/ffffff?text=B" alt="Pedidos Icon" class="nav-icon">
+                <span class="nav-text">Pedidos</span>
+            </a>
+            <a href="#ubicacion" class="text-gray-600 hover:text-gray-900 text-lg font-medium py-2 flex items-center nav-item">
+                <img src="https://via.placeholder.com/20x20/cccccc/ffffff?text=U" alt="Ubicación Icon" class="nav-icon">
+                <span class="nav-text">Ubicación</span>
+            </a>
+            <a href="#opiniones" class="text-gray-600 hover:text-gray-900 text-lg font-medium py-2 flex items-center nav-item">
+                <img src="https://via.placeholder.com/20x20/cccccc/ffffff?text=O" alt="Opiniones Icon" class="nav-icon">
+                <span class="nav-text">Opiniones</span>
+            </a>
+        </div>
+    </aside>
+
+    <div class="flex-grow">
+        <nav class="bg-white shadow-lg p-4 sticky top-0 z-20">
+            <div class="container mx-auto flex items-center justify-center relative">
+                <a href="#" class="text-4xl font-extrabold text-yellow-500 hover:text-yellow-600 transition duration-200">Sabores del Alma.</a>
+                
+                <button class="lg:hidden absolute right-4 text-gray-600 hover:text-gray-900 focus:outline-none">
+                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+            </div>
+        </nav>
+<section id="presentacion" class="relative h-screen overflow-hidden">
+  <img src="Portada.jpg" alt="Portada Sabores del Alma" class="absolute inset-0 w-full h-full object-cover object-center z-0">
+  <div class="absolute inset-0 bg-black bg-opacity-50 z-10"></div>
+
+  <!-- Contenedor con flex para distribuir elementos verticalmente -->
+  <div class="relative z-20 flex flex-col justify-between items-center h-full py-12 px-4 text-center">
+    
+    <!-- Encabezado y descripción -->
+    <div>
+    
+    </div>
+
+    <!-- Botón al final, centrado -->
+    <div class="mb-6">
+      <a href="#menu" class="bg-yellow-500 hover:bg-yellow-600 text-gray-900 font-bold py-3 px-6 rounded-full text-lg transition duration-300">
+        Explorar Menú
+      </a>
+    </div>
+  </div>
+</section>
+
+
+  
+
+ <section id="menu" class="py-16 bg-cover bg-center relative" style="background-image: url('fondo_menú.jpg');">
+  <div class="absolute inset-0 bg-black bg-opacity-60 z-0"></div>
+
+  <div class="container mx-auto px-4 relative z-10">
+    <h2 class="text-4xl font-bold text-center text-[#FACC15] mb-12 drop-shadow-lg">Nuestro Menú Exquisito</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="bg-white bg-opacity-90 rounded-lg shadow-md p-6 flex flex-col items-center">
+        <img src="Bebidas.jpg" alt="Coctelería" class="rounded-lg mb-4 w-full h-48 object-cover">
+        <h3 class="text-2xl font-semibold text-gray-800 mb-2">Coctelería</h3>
+        <p class="text-gray-700 text-center mb-4">Frutales, frescos y con el toque perfecto de alcohol. ¡Elige tu favorito y deja que el sabor haga el resto!</p>
+        <span class="text-xl font-bold text-yellow-600">$150.00 MXN</span>
+      </div>
+      <div class="bg-white bg-opacity-90 rounded-lg shadow-md p-6 flex flex-col items-center">
+        <img src="platofuerte.jpg" alt="Plato Principal" class="rounded-lg mb-4 w-full h-48 object-cover">
+        <h3 class="text-2xl font-semibold text-gray-800 mb-2">Plato principal</h3>
+        <p class="text-gray-700 text-center mb-4">Filete de res sellado, con puré cremoso, zanahorias glaseadas y salsa de vino tinto.</p>
+        <span class="text-xl font-bold text-yellow-600">$450.00 MXN</span>
+      </div>
+      <div class="bg-white bg-opacity-90 rounded-lg shadow-md p-6 flex flex-col items-center">
+        <img src="postres.jpg" alt="Postre" class="rounded-lg mb-4 w-full h-48 object-cover">
+        <h3 class="text-2xl font-semibold text-gray-800 mb-2">Postres</h3>
+        <p class="text-gray-700 text-center mb-4">Tarta de chocolate suave con fresas y arándanos frescos.</p>
+        <span class="text-xl font-bold text-yellow-600">$165.00 MXN</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+        <section id="pedidos" class="py-16 bg-gray-100">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Haz tu Pedido Ahora</h2>
+                <p class="text-lg text-gray-700 mb-8">Ofrecemos opciones de pedido a domicilio y para llevar. ¡Pide tus platillos favoritos desde la comodidad de tu hogar!</p>
+
+                <div class="flex flex-col md:flex-row justify-center space-y-6 md:space-y-0 md:space-x-8">
+                    <a href="#" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-full text-xl transition duration-300 shadow-lg">
+                        Pedidos a Domicilio
+                    </a>
+                    <a href="#" class="bg-green-600 hover:bg-green-700 text-white font-bold py-4 px-8 rounded-full text-xl transition duration-300 shadow-lg">
+                        Pedidos para Recoger
+                    </a>
+                </div>
+                <p class="text-gray-600 mt-8 text-md">También puedes contactarnos directamente para pedidos especiales o reservaciones:</p>
+                <p class="text-yellow-600 text-2xl font-bold mt-2">Teléfono: +52 228 123 4567</p>
+            </div>
+        </section>
+
+        <section id="ubicacion" class="py-16 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Encuéntranos Aquí</h2>
+                <div class="flex flex-col md:flex-row items-center md:space-x-8">
+                    <div class="md:w-1/2 mb-8 md:mb-0">
+                        <p class="text-gray-700 text-lg mb-4">Estamos ubicados en el corazón de Xalapa, un lugar de fácil acceso para que disfrutes de nuestra cocina.</p>
+                        <p class="text-gray-700 text-lg mb-4">**Dirección:** Calle Ficticia #123, Colonia Ejemplo, Xalapa, Veracruz, México, CP 91000</p>
+                        <p class="text-gray-700 text-lg">Te esperamos con los brazos abiertos para brindarte una experiencia gastronómica inigualable.</p>
+                    </div>
+                    <div class="md:w-1/2">
+                        <div class="bg-gray-200 h-64 w-full rounded-lg shadow-md flex items-center justify-center text-gray-600 text-xl">
+                            [Aquí iría un mapa incrustado de Google Maps]
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15024.168705353067!2d-96.93608195!3d19.54471925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85db3276c117d79b%3A0x6e7e7e7e7e7e7e7e!2sXalapa%2C%20Ver.!5e0!3m2!1ses-419!2smx!4v1678912345678!5m2!1ses-419!2smx" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="opiniones" class="py-16 bg-gray-100">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Lo que Dicen Nuestros Clientes</h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <p class="text-gray-700 italic mb-4">"¡Una experiencia culinaria excepcional! Cada plato fue una obra de arte y el servicio impecable."</p>
+                        <div class="flex items-center">
+                            <img src="https://via.placeholder.com/50x50/cccccc/ffffff?text=U1" alt="Usuario 1" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <p class="font-semibold text-gray-800">Ana García</p>
+                                <p class="text-sm text-gray-500">Comensal frecuente</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <p class="text-gray-700 italic mb-4">"El mejor lugar para cenar en Xalapa. ¡Recomendado al 100%!"</p>
+                        <div class="flex items-center">
+                            <img src="https://via.placeholder.com/50x50/cccccc/ffffff?text=U2" alt="Usuario 2" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <p class="font-semibold text-gray-800">Luis Hernández</p>
+                                <p class="text-sm text-gray-500">Visitante ocasional</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md p-6">
+                        <p class="text-gray-700 italic mb-4">"Ambiente acogedor, comida deliciosa y precios justos. Volveremos pronto."</p>
+                        <div class="flex items-center">
+                            <img src="https://via.placeholder.com/50x50/cccccc/ffffff?text=U3" alt="Usuario 3" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <p class="font-semibold text-gray-800">María López</p>
+                                <p class="text-sm text-gray-500">Cliente satisfecho</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+              <div class="bg-white text-gray-800 p-6 text-center">
+            <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div>
+                    <h3 class="text-xl font-semibold mb-2">Horario</h3>
+                    <p>Lunes - Viernes: 12:00 PM - 10:00 PM</p>
+                    <p>Sábado - Domingo: 1:00 PM - 11:00 PM</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-2">Contacto</h3>
+                    <p>Teléfono: +52 228 123 4567</p>
+                    <p>Email: info@tudominio.com</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-2">Dirección</h3>
+                    <p>Calle Ficticia #123, Colonia Ejemplo</p>
+                    <p>Xalapa, Veracruz, México, CP 91000</p>
+                </div>
+            </div>
+        </div>
+
+        <footer class="bg-gray-900 text-white p-6 text-center">
+            <div class="container mx-auto">
+                <p>© 2025 Nombre del Restaurante. Todos los derechos reservados.</p>
+                <div class="mt-4 space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-white">Política de Privacidad</a>
+                    <a href="#" class="text-gray-400 hover:text-white">Términos y Condiciones</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

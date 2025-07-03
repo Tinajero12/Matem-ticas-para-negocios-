@@ -1,0 +1,79 @@
+/* Fondo verde para toda la página */
+body {
+  background-image: url(Img.jpeg); /* Cambia 'fondo-verde.jpg' por la ruta de tu imagen */
+  background-size: cover; /* La imagen cubre todo el fondo */
+  background-position: center center; /* Centrar la imagen */
+  background-repeat: no-repeat; /* Que no se repita */
+  color: white;
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+/* Título principal destacado con sombra y fondo semitransparente */
+h1 {
+  background-color: rgba(0, 0, 0, 0.4); /* Fondo negro semi-transparente */
+  padding: 15px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+  font-size: 3rem;
+  text-align: center;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+  margin-bottom: 30px;
+}
+
+/* Ventajas con color diferente, por ejemplo, un amarillo claro */
+h2 {
+  color: #fffde7; /* Amarillo muy claro */
+  margin-bottom: 10px;
+}
+
+ul li {
+  color: #ffeb3b; /* Amarillo brillante */
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+/* Otros estilos básicos para inputs y botones */
+input[type="email"] {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  width: 250px;
+  margin-right: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #ffeb3b;
+  color: #2e7d32;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #fbc02d;
+}
+
+/* Pie de página */
+footer {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #c8e6c9;
+}
+img {
+    width:15%;
+    height: auto
+}
+
+#imagenes{
+    background-color: ghostwhite;
+    text-align: center; 
+ 
+    object-fit: cover;
+    margin: 5px;
+    border-radius: 5px;
+    
+}
