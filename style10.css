@@ -1,0 +1,65 @@
+/* --- Fondo de granos de café para toda la página --- */
+body {
+  background-image: url('granos-café.jpg'); /* Reemplaza con tu imagen o usa una URL externa */
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #222;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* --- Fondo blanco translúcido para secciones (legibilidad) --- */
+section {
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 40px 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+/* --- Estilo del título "Nuestro Menú" --- */
+#titulo-2 {
+  color: #7b3e1d; /* Marrón estilo cafetería */
+  text-align: center;
+  font-family: 'Georgia', serif;
+  font-weight: bold;
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+/* --- Estilo para textos dentro de tarjetas del menú --- */
+#menu .card-body {
+  text-align: center;
+  font-family: 'Georgia', serif;
+  color: #4e342e;
+}
+
+#menu .card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #6d4c41;
+}
+
+#menu .card-text {
+  font-size: 1rem;
+  color: #5d4037;
+}
+
+/* --- Imágenes dentro de las tarjetas del menú --- */
+#menu .card-img-top {
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 2px solid #ccc;
+}
+
+/* --- Título principal ("Bienvenidos a Dulce Aroma") --- */
+#presentacion h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.5rem;
+  color: #5a2e0c;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+/* --- Descripción debajo del título p*
